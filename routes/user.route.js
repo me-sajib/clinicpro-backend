@@ -1,3 +1,4 @@
+const { addSchedules } = require('../controllers/schedules.controller');
 const { getUsers, createUser, singleUser, userLogin } = require('../controllers/user.controller');
 
 const userRouter = require('express').Router();

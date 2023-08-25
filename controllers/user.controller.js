@@ -21,7 +21,7 @@ const userLogin = async (req, res) => {
     try {
         const user = await userModel.findOne({ phone, password });
         if (!user) {
-            res.status(400).json({ message: "Invalid credentials" });
+            res.json({ message: "Invalid credentials" });
             return;
         }
         const token = jwt.sign({ phone: user.phone }, process.env.JWT_SECRET, {
